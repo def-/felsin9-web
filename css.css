@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+}
+.logo {
+  float: right;
+}
+.code {
+  font-family: monospace;
+  background-color: #eeeeee;
+  margin: 0 2ex;
+  padding 1ex;
+}
