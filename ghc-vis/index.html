@@ -8,6 +8,12 @@
   </head>
   <body>
     <h1>ghc-vis</h1>
+    <p>
+      ghc-vis is a tool to visualize live Haskell data structures in GHCi.
+      Evaluation is not forced and you can interact with the visualized data
+      structures. This allows seeing Haskell's lazy evaluation and sharing in
+      action.
+    </p>
     <ul>
       <li><a href="#introduction">Introduction</a></li>
       <li><a href="#basic-usage">Basic Usage</a></li>
@@ -103,12 +109,6 @@ b = [1,2,3,1,2,3]</pre>
     <p><img alt="Demo" src="0.png"/></p>
     <h2 id="basic-usage">Basic usage</h2>
     <p>
-      ghc-vis is a tool to visualize live Haskell data structures in GHCi.
-      Evaluation is not forced and you can interact with the visualized data
-      structures. This allows seeing Haskell's lazy evaluation and sharing in
-      action.
-    </p>
-    <p>
       The <a href="http://hackage.haskell.org/package/ghc-vis">package</a> is
       available on Hackage. Install it like this:
     </p>
@@ -140,22 +140,24 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
       <img alt="Demo" src="1.png" />
     </p>
     <p>
-      Functions are red, named objects are green and links to an already shown
-      object are blue.
+      Thunks are red, Functions are yellow, named objects are green and links
+      to an already shown object are blue.
     </p>
     <p>
       Notice how a is referenced by b.
     </p>
     <p>
       Evaluate an object that is shown in the visualization. You can also click
-      on the object to evaluate it.
+      on the object to evaluate it. Only thunks, which are named starting with
+      a t, can be evaluated.
     </p>
     <pre class="code">λ> :eval t1</pre>
     <p><img alt="Demo" src="2.png" /></p>
     <p>
       The first element of b has been evaluated. We see that it's a reference
       to the value that's also referenced in a, as they share the same name
-      "t0".
+      "b0". "S# 1" stands for the Integer data constructor, which is called S#
+      in GHC and its argument 1.
     </p>
     <p>
       Switch between the list view and the graph view:
@@ -179,6 +181,39 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
     <pre class="code">
 λ> :clear</pre>
     <h2 id="more-examples">More Examples</h2>
+    <p>
+      Interpreted and compiled code may looks very different when evaluating.
+      First an example of interpreted code, -fbyte-code is the default in
+      GHCi if the code hasn't been compiled already:
+    </p>
+    <pre class="code">
+λ> :set -fbyte-code
+λ> :!cat Sieve.hs
+module Sieve where
+primes = sieve [2..] where sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p > 0]
+λ> :l Sieve
+[1 of 1] Compiling Sieve            ( Sieve.hs, interpreted )
+Ok, modules loaded: Sieve.
+λ> head primes
+2
+λ> :switch
+λ> :view primes</pre>
+    <p><img alt="Demo" src="interpreted.png" /></p>
+    <p>
+      The view is rather confusing as a lot of type class information is
+      included. Let's look at compiled object code:
+    </p>
+    <pre class="code">
+λ> :set -fobject-code
+λ> :l Sieve
+[1 of 1] Compiling Sieve            ( Sieve.hs, Sieve.o )
+Ok, modules loaded: Sieve.
+λ> head primes
+2
+λ> :switch
+λ> :view primes
+    </pre>
+    <p><img alt="Demo" src="compiled.png" /></p>
     <pre class="code">
 λ> let l = [1,2,3]
 λ> :view l
@@ -188,7 +223,7 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
 λ> :view x
 λ> let y = id (:) () y
 λ> :view y
-λ> :eval t3
+λ> :eval t1
 λ> :switch</pre>
     <p><img alt="Demo" src="5.png" /> <img alt="Demo" src="6.png" /></p>
     <pre class="code">
