@@ -10,3 +10,14 @@ a {
   margin: 0 2ex;
   padding 1ex;
 }
+.subfig {
+  float: left;
+  text-align: center;
+}
+.subfig p {
+  margin: 0 2em;
+}
+.subfig-after {
+  clear: both;
+  padding-top: 1em;
+}
