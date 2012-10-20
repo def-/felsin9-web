@@ -8,7 +8,7 @@ a {
   font-family: monospace;
   background-color: #eeeeee;
   margin: 0 2ex;
-  padding 1ex;
+  padding: 1ex;
 }
 .subfig {
   float: left;
@@ -29,7 +29,7 @@ a {
 table {
   border-collapse: collapse;
   margin: 2ex;
-  padding 1ex;
+  padding: 1ex;
 }
 
 td {
