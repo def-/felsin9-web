@@ -45,9 +45,9 @@
 ones = [1,1..]</pre>
     <p>
       to construct an infinite list of 1s, which we can now access by the
-      suggestive name ones. How does this work? Clearly the entire list can’t
-      be stored in memory as we do not possess the infinite tape of a turing
-      machine.
+      suggestive name <em>ones</em>. How does this work? Clearly the entire
+      list can’t be stored in memory as we do not possess the infinite tape of
+      a turing machine.
     </p><p>
       We can write a function to retrieve the nth member of a list:
     </p>
@@ -56,9 +56,9 @@ at 0 (x:xs) = x
 at n (x:xs) = at (n-1) xs</pre>
     <p>
       Evaluating <em>at 2 ones</em> extracts the second member of the list
-      ones, which gives us the integer 1. In the same manner <em>at 3 ones</em>
-      and <em>at 4 ones</em> give us 1. But what is happening to the infinite
-      list of ones as we access its members?
+      <em>ones</em>, which gives us the integer 1. In the same manner <em>at 3
+      ones</em> and <em>at 4 ones</em> give us 1. But what is happening to the
+      infinite list of ones as we access its members?
     </p>
     <div class="subfig">
       <p>After <em>at 2 ones:</em></p>
