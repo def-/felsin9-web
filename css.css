@@ -21,3 +21,27 @@ a {
   clear: both;
   padding-top: 1em;
 }
+
+.cont {
+  padding-right: 0.5em;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 2ex;
+  padding 1ex;
+}
+
+td {
+  padding-right: 2em;
+}
+
+th {
+  padding-right: 2em;
+  text-align: left;
+  border-bottom: 1px solid #000000;
+}
+
+tr:hover{
+  background-color: #eeeeee;
+}

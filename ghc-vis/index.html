@@ -20,6 +20,8 @@
       <li><a href="#other-tools">Other Tools</a></li>
       <li><a href="#more-examples">More Examples</a></li>
       <li><a href="#combined-debugger">Combined with GHCi's Debugger (Video example)</a></li>
+      <li><a href="#commands">Commands</a></li>
+      <li><a href="#key-bindings">Key and Mouse Bindings</a></li>
       <li><a href="#as-library">Using ghc-vis as a Library</a></li>
       <li><a href="#thesis">Thesis</a></li>
       <li><a href="#issues">Bugs, Feature Requests, Development</a></li>
@@ -107,7 +109,7 @@ ones' = 1 : ones'</pre>
     </p>
     <pre class="code">
 $ cabal install ghc-vis
-$ echo ":script $HOME/.cabal/share/ghc-vis-0.4/ghci" >> ~/.ghci</pre>
+$ echo ":script $HOME/.cabal/share/ghc-vis-0.5/ghci" >> ~/.ghci</pre>
     <p>
       You need GTK, Cairo and Pango and their corresponding Haskell library
       bindings. If you run into any problems, try this:
@@ -373,7 +375,67 @@ array ((1,1),(3,2)) [((1,1),42),((1,2),23),((2,1),999),((2,2),1000),((3,1),1001)
       Your browser does not seem to support h264 videos, please down the video below.
     </video>
     <p><strong>Download Video:</strong> <a href="debugger.mp4">debugger.mp4</a>, <a href="debugger.webm">debugger.webm</a></p>
-    <h2 id="as-library">Using ghc-vis as a Library</h2>
+  <h2 id="commands">Commands</h2>
+    Commands are executed on the GHCi command line:
+    <table>
+      <tr class="header">
+        <th colspan=1>Command</th><th>Action</th>
+      </tr><tr>
+        <td>:vis</td><td>Run the visualization window</td>
+      </tr><tr>
+        <td>:view x</td><td>Add the Haskell expression <em>x</em> to the visualization window</td>
+      </tr><tr>
+        <td>:eval t</td><td>Force evaluation to WHNF of the thunk named <em>t</em></td>
+      </tr><tr>
+        <td>:switch</td><td>Switch between the visualization types (linear, graph)</td>
+      </tr><tr>
+        <td>:update</td><td>Update the visualization window, in case an expression has changed</td>
+      </tr><tr>
+        <td>:clear</td><td>Remove all visualized expressions</td>
+      </tr><tr>
+        <td>:export file</td><td>Export the current visualization to a file; <em>SVG, PDF, PS</em> and <em>PNG</em> supported</td>
+      </tr>
+    </table>
+  <h2 id="key-bindings">Key and Mouse Bindings</h2>
+    Key and mouse bindings work in the visualization window:
+    <table>
+      <tr class="header">
+        <th colspan=3>Keys</th><th>Mouse</th><th>Action</th>
+      </tr><tr>
+        <td class="cont">v</td><td colspan=3></td><td>Switch view</td>
+      </tr><tr>
+        <td class="cont">c</td><td colspan=3></td><td>Clear view</td>
+      </tr><tr>
+        <td class="cont">u</td><td colspan=3></td><td>Update view</td>
+      </tr><tr>
+        <td class="cont">Enter, </td><td colspan=2>Space,</td><td>Left click</td><td>Evaluate and update</td>
+      </tr><tr>
+        <td class="cont"></td><td class="cont"></td><td></td><td>Right click and drag</td><td>Move</td>
+      </tr><tr>
+        <td class="cont">Left, </td><td class="cont">h, </td><td>a</td><td></td><td>Move left</td>
+      </tr><tr>
+        <td class="cont"></td><td class="cont">H, </td><td>A</td><td></td><td>Move left fast</td>
+      </tr><tr>
+        <td class="cont">Right, </td><td class="cont">l, </td><td>d</td><td></td><td>Move right</td>
+      </tr><tr>
+        <td class="cont"></td><td class="cont">L, </td><td>D</td><td></td><td>Move right fast</td>
+      </tr><tr>
+        <td class="cont">Up, </td><td class="cont">k, </td><td>w</td><td></td><td>Move up</td>
+      </tr><tr>
+        <td class="cont"></td><td class="cont">K, </td><td>W</td><td></td><td>Move up fast</td>
+      </tr><tr>
+        <td class="cont">Down, </td><td class="cont">j, </td><td>s</td><td></td><td>Move down</td>
+      </tr><tr>
+        <td class="cont"></td><td class="cont">J, </td><td>S</td><td></td><td>Move down fast</td>
+      </tr><tr>
+        <td class="cont">+, </td><td colspan=2>PageUp</td><td>Wheel up</td><td>Zoom in</td>
+      </tr><tr>
+        <td class="cont">-, </td><td colspan=2>PageDown</td><td>Wheel down</td><td>Zoom out</td>
+      </tr><tr>
+        <td class="cont">0, </td><td colspan=2>=</td><td>Wheel click</td><td>Reset zoom and position</td>
+      </tr>
+    </table>
+  <h2 id="as-library">Using ghc-vis as a Library</h2>
     <p>
       Although ghc-vis is meant to be used in GHCi it can also be used as a
       library in regular Haskell programs which are run or compiled by GHC. You
@@ -402,14 +464,14 @@ main = do
   switch
 
   getChar</pre>
-    <h2 id="thesis">Thesis</h2>
+  <h2 id="thesis">Thesis</h2>
     <p>
       ghc-vis was developed as part of my Bachelor Thesis titled <a
       href="thesis">Visualization of Lazy Evaluation and Sharing</a>. It
       contains some more examples, explains how it works and what kind of
       problems I encountered.
     </p>
-    <h2 id="issues">Bugs, Feature Requests, Development</h2>
+  <h2 id="issues">Bugs, Feature Requests, Development</h2>
     <p>
       If you have any problems, new ideas or comments concerning ghc-vis, just
       drop me an email: <a
