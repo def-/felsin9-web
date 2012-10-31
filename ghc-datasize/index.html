@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Language" content="de_DE" />
+    <link rel="stylesheet" type="text/css" href="../css.css" />
+    <title>GHC-DataSize: Determine the size of Haskell data structures in GHC's memory</title>
+  </head>
+  <body>
+    <h1>GHC-DataSize</h1>
+    <p>
+      GHC-DataSize is a tool to determine the size of Haskell data structures in
+      GHC's memory. Determining the size of recursive data structures is
+      supported. All sizes are in Bytes.
+    </p>
+    <ul>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#issues">Bugs, Feature Requests, Development</a></li>
+    </ul>
+    <h2 id="installation">Installation</h2>
+    <p>
+      The <a href="http://hackage.haskell.org/package/ghc-datasize">package</a> is
+      available on Hackage. Install it like this:
+    </p>
+    <pre class="code">
+$ cabal install ghc-datasize</pre>
+    <p>
+      If you want to make sure you get the newest version of GHC-DataSize
+      update your cabal database before:
+    </p>
+    <pre class="code">
+$ cabal update</pre>
+    <h2 id="usage">Usage</h2>
+    <p>
+      Now you can run ghci and experiment with GHC-DataSize:
+    </p>
+    <pre class="code">
+$ ghci
+GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
+λ> import GHC.DataSize
+λ> recursiveSize 3.3
+16
+λ> recursiveSize 'a'
+16
+λ> recursiveSize (1,2,3,4)
+104
+λ> recursiveSize True
+8
+λ> import Data.Complex
+λ> recursiveSize $ 2 :+ 3
+248</pre>
+    <p>
+      For data structures that are not yet evaluated the size of the
+      unevaluated structure in memory is calculated. To make sure you get the
+      size of the resulting data structure, you have to force evaluation to
+      Weak-Head Normal Form (WHNF):
+    </p>
+    <pre class="code">
+λ> recursiveSize $! 2 :+ 3
+56
+λ> recursiveSize $! (3 :: Int)
+16
+λ> recursiveSize $! (3 :: Integer)
+16
+λ> recursiveSize $! (2^64 :: Integer)
+56
+λ> recursiveSize $! (2^128 :: Integer)
+72
+λ> recursiveSize $! (2^1024 :: Integer)
+184
+λ> recursiveSize $! "foo"
+88
+λ> recursiveSize $! "foobar"
+88</pre>
+    <p>
+      For composite data structures evaluation to WHNF is not enough. In the
+      list "foo" only the first element, 'f', was evaluated, while the rest of
+      the list stays unevaluated. To get the size of the fully evaluated data
+      structure a deep evaluation has to be forced:
+    </p>
+    <pre class="code">
+λ> import Control.DeepSeq
+λ> recursiveSize $!! ""
+8
+λ> recursiveSize $!! "foo"
+144
+λ> recursiveSize $!! "foobar"
+264</pre>
+  <h2 id="issues">Bugs, Feature Requests, Development</h2>
+    <p>
+      If you have any problems, new ideas or comments concerning GHC-DataSize,
+      just drop me an email: <a
+      href="mailto:dennis@felsin9.de">dennis@felsin9.de</a>. I'll be glad to
+      help you.
+    </p>
+  </body>
+</html>
