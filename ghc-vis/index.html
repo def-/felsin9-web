@@ -109,7 +109,7 @@ ones' = 1 : ones'</pre>
     </p>
     <pre class="code">
 $ cabal install ghc-vis
-$ echo ":script $HOME/.cabal/share/ghc-vis-0.5/ghci" >> ~/.ghci</pre>
+$ echo ":script $HOME/.cabal/share/ghc-vis-0.6/ghci" >> ~/.ghci</pre>
     <p>
       You need GTK, Cairo, Pango, Graphviz and their corresponding Haskell
       library bindings. If you run into any problems, try this:
@@ -428,6 +428,8 @@ array ((1,1),(3,2)) [((1,1),42),((1,2),23),((2,1),999),((2,2),1000),((3,1),1001)
         <th>Command</th><th>Action</th>
       </tr><tr>
         <td>:vis</td><td>Run the visualization window</td>
+      </tr><tr>
+        <td>:mvis</td><td>Run the minimal visualization window</td>
       </tr><tr>
         <td>:view x</td><td>Add the Haskell expression <em>x</em> to the visualization window</td>
       </tr><tr>
