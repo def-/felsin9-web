@@ -267,7 +267,34 @@ b = [1,2,3,1,2,3]</pre>
     </p>
     <p><img alt="Demo" src="0.png"/></p>
     <h2 id="more-examples">More Examples</h2>
-    <p>
+    <p id="fibonacci">
+      Let's consider a function f that calculates fibonacci numbers:
+    </p>
+    <pre class="code">
+λ> let f = 0 : 1 : zipWith (+) f (tail f)
+λ> f !! 2
+1
+λ> :switch
+λ> :view f
+λ> f !! 3
+2
+λ> :update
+λ> f !! 4
+3
+λ> :update</pre>
+    <div class="subfig">
+      <p>After <em>f !! 2:</em></p>
+      <img alt="Demo" src="fib1.png" />
+    </div>
+    <div class="subfig">
+      <p>After <em>f !! 3:</em></p>
+      <img alt="Demo" src="fib2.png" />
+    </div>
+    <div class="subfig">
+      <p>After <em>f !! 4:</em></p>
+      <img alt="Demo" src="fib3.png" />
+    </div>
+    <p class="subfig-after">
       Interpreted and compiled code may looks very different when evaluating.
       First an example of interpreted code, -fbyte-code is the default in
       GHCi if the code hasn't been compiled already:
