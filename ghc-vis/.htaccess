@@ -1,2 +1,6 @@
 AddType video/mp4  .mp4
 AddType video/webm .webm
+AddType image/svg+xml .svg
+AddType image/svg+xml .svgz
+
+AddEncoding gzip svgz

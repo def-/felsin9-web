@@ -62,15 +62,15 @@ at n (x:xs) = at (n-1) xs</pre>
     </p>
     <div class="subfig">
       <p>After <em>at 1 ones:</em></p>
-      <img alt="Demo" width="183" height="265" src="intro1-1.svg" />
+      <img alt="Demo" width="183" height="265" src="intro1-1.svgz" />
     </div>
     <div class="subfig">
       <p>After <em>at 2 ones:</em></p>
-      <img alt="Demo" width="224" height="321" src="intro1-2.svg" />
+      <img alt="Demo" width="224" height="321" src="intro1-2.svgz" />
     </div>
     <div class="subfig">
       <p>After <em>at 3 ones:</em></p>
-      <img alt="Demo" width="266" height="378" src="intro1-3.svg" />
+      <img alt="Demo" width="266" height="378" src="intro1-3.svgz" />
     </div>
     <p class="subfig-after">
       The solution is that the infinite list of ones gets constructed just as
@@ -88,15 +88,15 @@ ones' = 1 : ones'</pre>
     </p>
     <div class="subfig">
       <p>After <em>at 1 ones':</em></p>
-      <img alt="Demo" width="74" height="153" src="intro2.svg" />
+      <img alt="Demo" width="74" height="153" src="intro2.svgz" />
     </div>
     <div class="subfig">
       <p>After <em>at 2 ones':</em></p>
-      <img alt="Demo" width="74" height="153" src="intro2.svg" />
+      <img alt="Demo" width="74" height="153" src="intro2.svgz" />
     </div>
     <div class="subfig">
       <p>After <em>at 3 ones':</em></p>
-      <img alt="Demo" width="74" height="153" src="intro2.svg" />
+      <img alt="Demo" width="74" height="153" src="intro2.svgz" />
     </div>
     <p class="subfig-after">
       This time no big list is constructed in memory, instead a list is created
@@ -138,7 +138,7 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
 λ> :view "foo" ++ "bar"</pre>
     <p>
       You should now see something similar to this:<br/>
-      <img alt="Demo" width="594" height="393" src="1.svg" />
+      <img alt="Demo" width="594" height="393" src="1.svgz" />
     </p>
     <p>
       Thunks are red, Functions are yellow, named objects are green and links
@@ -153,7 +153,7 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
       a t, can be evaluated.
     </p>
     <pre class="code">λ> :eval t1</pre>
-    <p><img alt="Demo" width="604" height="250" src="2.svg" /></p>
+    <p><img alt="Demo" width="604" height="250" src="2.svgz" /></p>
     <p>
       The first element of b has been evaluated. We see that it's a reference
       to the value that's also referenced in a, as they share the same name
@@ -164,7 +164,7 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
       Switch between the list view and the graph view:
     </p>
     <pre class="code">λ> :switch</pre>
-    <p><img alt="Demo" width="396" height="499" src="3.svg" /></p>
+    <p><img alt="Demo" width="396" height="499" src="3.svgz" /></p>
     <p>
       When an object is updated by accessing it, you have to call :update to
       refresh the visualization window. You can also click on an object to
@@ -174,7 +174,7 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
 λ> a !! 2
 3
 λ> :update</pre>
-    <p><img alt="Demo" width="337" height="499" src="4.svg" /></p>
+    <p><img alt="Demo" width="337" height="499" src="4.svgz" /></p>
     <p>
       Clear the visualization window, this also happens when you :load or
       :reload a source file:
@@ -266,7 +266,7 @@ b = [1,2,3,1,2,3]</pre>
       What we'd like to see is something like this, which is what ghc-vis
       outputs:
     </p>
-    <p><img alt="Demo" width="209" height="498" src="0.svg"/></p>
+    <p><img alt="Demo" width="209" height="498" src="0.svgz"/></p>
     <h2 id="more-examples">More Examples</h2>
     <p id="fibonacci">
       Let's consider a function f that calculates fibonacci numbers:
@@ -285,15 +285,15 @@ b = [1,2,3,1,2,3]</pre>
 λ> :update</pre>
     <div class="subfig">
       <p>After <em>f !! 1:</em></p>
-      <img alt="Demo" width="158" height="256" src="fib1.svg" />
+      <img alt="Demo" width="158" height="256" src="fib1.svgz" />
     </div>
     <div class="subfig">
       <p>After <em>f !! 2:</em></p>
-      <img alt="Demo" width="159" height="321" src="fib2.svg" />
+      <img alt="Demo" width="159" height="321" src="fib2.svgz" />
     </div>
     <div class="subfig">
       <p>After <em>f !! 3:</em></p>
-      <img alt="Demo" width="196" height="378" src="fib3.svg" />
+      <img alt="Demo" width="196" height="378" src="fib3.svgz" />
     </div>
     <p class="subfig-after">
       Interpreted and compiled code may looks very different when evaluating.
@@ -312,7 +312,7 @@ Ok, modules loaded: Sieve.
 2
 λ> :switch
 λ> :view primes</pre>
-    <p><img alt="Demo" width="1251" height="505" src="interpreted.svg" /></p>
+    <p><img alt="Demo" width="1251" height="505" src="interpreted.svgz" /></p>
     <p>
       The view is rather confusing as a lot of type class information is
       included. Let's look at compiled object code:
@@ -327,7 +327,7 @@ Ok, modules loaded: Sieve.
 λ> :switch
 λ> :view primes
     </pre>
-    <p><img alt="Demo" width="231" height="498" src="compiled.svg" /></p>
+    <p><img alt="Demo" width="231" height="498" src="compiled.svgz" /></p>
     <pre class="code">
 λ> let l = [1,2,3]
 λ> :view l
@@ -339,20 +339,20 @@ Ok, modules loaded: Sieve.
 λ> :view y
 λ> :eval t1
 λ> :switch</pre>
-    <p><img alt="Demo" width="404" height="488" src="5.svg" /> <img alt="Demo" width="225" height="498" src="6.svg" /></p>
+    <p><img alt="Demo" width="404" height="488" src="5.svgz" /> <img alt="Demo" width="225" height="498" src="6.svgz" /></p>
     <pre class="code">
 λ> data BinaryTree = BT BinaryTree Int BinaryTree | Leaf
 λ> let x = BT (BT (BT Leaf 1 (BT Leaf 2 Leaf)) 3 (BT (BT Leaf 4 (BT Leaf 5 Leaf)) 6 Leaf)) 7 Leaf
 λ> :view x
 λ> :switch</pre>
-    <p><img alt="Demo" width="595" height="496" src="bt.svg" /></p>
+    <p><img alt="Demo" width="595" height="496" src="bt.svgz" /></p>
     <p>A working cyclic double linked list: <a href="dll.hs">dll.hs</a></p>
     <pre class="code">
 λ> :l dll.hs
 λ> let x = mkDList [1..4]
 λ> :view x
 λ> :switch</pre>
-    <p><img alt="Demo" width="446" height="501" src="dll.svg" /></p>
+    <p><img alt="Demo" width="446" height="501" src="dll.svgz" /></p>
     <p>
       A non-working cyclic double linked list: <a href="dll2.hs">dll2.hs</a>
       New list elements get created all the time instead of referencing the
@@ -363,18 +363,18 @@ Ok, modules loaded: Sieve.
 λ> let x = mkDList [1..4]
 λ> :view x
 λ> :switch</pre>
-    <p><img alt="Demo" width="411" height="493" src="dll2.svg" /></p>
+    <p><img alt="Demo" width="411" height="493" src="dll2.svgz" /></p>
     <p><a href="dfa.hs">dfa.hs</a></p>
     <pre class="code">
 λ> :l dfa.hs
 λ> :view dom18
 λ> :switch</pre>
-    <p><img alt="Demo" width="387" height="498" src="dfa.svg" /></p>
+    <p><img alt="Demo" width="387" height="498" src="dfa.svgz" /></p>
     <pre class="code">
 λ> :view (Data.IntMap.fromList $ zip [1..10] [1..])
 λ> :eval t0
 λ> :switch</pre>
-    <p><img alt="Demo" width="629" height="282" src="intmap.svg" /></p>
+    <p><img alt="Demo" width="629" height="282" src="intmap.svgz" /></p>
     <pre class="code">
 λ> let a = Data.ByteString.pack [0x44,0x45,0x46]
 λ> :view a
@@ -384,14 +384,14 @@ Ok, modules loaded: Sieve.
 λ> a
 "DEF"
 λ> :update</pre>
-    <p><img alt="Demo" width="272" height="499" src="bytestring.svg" /></p>
+    <p><img alt="Demo" width="272" height="499" src="bytestring.svgz" /></p>
     <pre class="code">
 λ> let b = GHC.Arr.array ((1,1),(3,2)) [((1,1),42),((1,2),23),((2,1),999),((2,2),1000),((3,1),1001),((3,2),1002)]
 λ> b
 array ((1,1),(3,2)) [((1,1),42),((1,2),23),((2,1),999),((2,2),1000),((3,1),1001),((3,2),1002)]
 λ> :view b
 λ> :switch</pre>
-    <p><img alt="Demo" width="632" "150" src="array.svg" /></p>
+    <p><img alt="Demo" width="632" "150" src="array.svgz" /></p>
     <h2 id="combined-debugger">Combined with GHCi's Debugger</h2>
     <p>
       ghc-vis can be used to watch data structures while a computation is
