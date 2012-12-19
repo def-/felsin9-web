@@ -16,6 +16,7 @@
     <ul>
       <li><a href="#installation">Installation</a></li>
       <li><a href="#usage">Usage</a></li>
+      <li><a href="#related">Related Projects</a></li>
       <li><a href="#issues">Bugs, Feature Requests, Development</a></li>
     </ul>
     <h2 id="installation">Installation</h2>
@@ -86,7 +87,22 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
 λ> recursiveSize $!! "foo"
 128
 λ> recursiveSize $!! "foobar"
-248</pre>
+248
+λ> import qualified Data.ByteString.Char8 as B
+λ> recursiveSize $!! take 1000 $ repeat 'X'
+24024
+λ> recursiveSize $!! B.pack $ take 1000 $ repeat 'X'
+1072</pre>
+    <p>
+      Strings are quite memory intensive, taking 24024 Bytes to store 1000
+      8-bit Chars. ByteStrings are much more memory friendly, taking only 1072
+      Bytes for the same data.
+    </p>
+  <h2 id="related">Related Projects</h2>
+    <p>
+      If you're not just interested in the size of Haskell data, but also their
+      structure in memory, have a look at <a href="../ghc-vis">ghc-vis</a>.
+    </p>
   <h2 id="issues">Bugs, Feature Requests, Development</h2>
     <p>
       If you have any problems, new ideas or comments concerning ghc-datasize,
