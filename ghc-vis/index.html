@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta http-equiv="Content-Language" content="de_DE" />
+    <meta http-equiv="Content-Language" content="en_US" />
     <link rel="stylesheet" type="text/css" href="../css.css" />
     <title>ghc-vis: Live visualization of data structures in GHCi</title>
   </head>
@@ -152,7 +152,7 @@ GHCi, version 7.4.2: http://www.haskell.org/ghc/  :? for help
       on the object to evaluate it. Only thunks, which are named starting with
       a t, can be evaluated.
     </p>
-    <pre class="code">λ> :eval t1</pre>
+    <pre class="code">λ> :eval t2</pre>
     <p><img alt="Demo" width="604" height="250" src="2.svgz" /></p>
     <p>
       The first element of b has been evaluated. We see that it's a reference
@@ -274,25 +274,25 @@ b = [1,2,3,1,2,3]</pre>
     <pre class="code">
 λ> let f = 0 : 1 : zipWith (+) f (tail f)
 λ> :switch
-λ> f !! 1
-1
-λ> :view f
 λ> f !! 2
 1
-λ> :update
+λ> :view f
 λ> f !! 3
+1
+λ> :update
+λ> f !! 4
 2
 λ> :update</pre>
     <div class="subfig">
-      <p>After <em>f !! 1:</em></p>
+      <p>After <em>f !! 2:</em></p>
       <img alt="Demo" width="158" height="256" src="fib1.svgz" />
     </div>
     <div class="subfig">
-      <p>After <em>f !! 2:</em></p>
+      <p>After <em>f !! 3:</em></p>
       <img alt="Demo" width="159" height="321" src="fib2.svgz" />
     </div>
     <div class="subfig">
-      <p>After <em>f !! 3:</em></p>
+      <p>After <em>f !! 4:</em></p>
       <img alt="Demo" width="196" height="378" src="fib3.svgz" />
     </div>
     <p class="subfig-after">
@@ -366,7 +366,7 @@ Ok, modules loaded: Sieve.
     <p><img alt="Demo" width="411" height="493" src="dll2.svgz" /></p>
     <p><a href="dfa.hs">dfa.hs</a></p>
     <pre class="code">
-λ> :l dfa.hs
+λ> :l dfa
 λ> :view dom18
 λ> :switch</pre>
     <p><img alt="Demo" width="387" height="498" src="dfa.svgz" /></p>
