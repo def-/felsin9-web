@@ -118,6 +118,14 @@ $ echo ":script /home/deen/.cabal/share/ghc-vis-0.7.0.1/ghci" >> ~/.ghci</pre>
 $ cabal update
 $ cabal install gtk2hs-buildtools</pre>
     <p>
+      Another common problem is enabled library profiling, which is not
+      supported by ghc-vis. You can disable it globally in your cabal config
+      by setting library-profiling to False in ~/.cabal/config. If you only
+      want to install ghc-vis without library profiling run the following:
+    </p>
+    <pre class="code">
+$ cabal install ghc-vis --disable-library-profiling</pre>
+    <p>
       Now you can run ghci and experiment with ghc-vis. Start the
       visualization:
     </p>
