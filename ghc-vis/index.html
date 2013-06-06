@@ -125,6 +125,13 @@ $ cabal install gtk2hs-buildtools</pre>
     </p>
     <pre class="code">
 $ cabal install ghc-vis --disable-library-profiling</pre>
+    <h3>Mac OS X</h3>
+    <p>
+      On Mac OS X you should install GTK as described in the <a
+      href="http://www.haskell.org/haskellwiki/Gtk2Hs/Mac">Haskell Wiki</a>.
+      Also install librsvg and disable library profiling.
+    </p>
+    <h3>Running ghc-vis</h3>
     <p>
       Now you can run ghci and experiment with ghc-vis. Start the
       visualization:
@@ -554,7 +561,7 @@ main = do
   let d = [1..]
   putStrLn $ show $ d !! 1
 
-  visualization
+  vis
   view a "a"
   view b "b"
   view c "c"
