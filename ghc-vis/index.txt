@@ -2,6 +2,8 @@ The ghc-vis User Guide
 ======================
 Dennis Felsing <dennis@felsin9.de>
 June 2013
+:toc2:
+:numbered:
 
 ghc-vis is a tool to visualize live Haskell data structures in GHCi.
 Evaluation is not forced and you can interact with the visualized data

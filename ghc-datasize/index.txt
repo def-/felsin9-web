@@ -2,6 +2,8 @@ The ghc-datasize User Guide
 ===========================
 Dennis Felsing <dennis@felsin9.de>
 June 2013
+:toc2:
+:numbered:
 
 ghc-datasize is a tool to determine the size of Haskell data structures in
 GHC's memory. Determining the size of recursive data structures is supported.
