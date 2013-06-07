@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.8" />
-<title>Visualization of Lazy Evaluation and Sharing</title>
+<title>Installing ghc-vis on Mac OS X 10.8</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -731,79 +731,98 @@ asciidoc.install();
 </head>
 <body class="article">
 <div id="header">
-<h1>Visualization of Lazy Evaluation and Sharing</h1>
+<h1>Installing ghc-vis on Mac OS X 10.8</h1>
+<span id="author">Dennis Felsing</span><br />
+<span id="email"><code>&lt;<a href="mailto:dennis@felsin9.de">dennis@felsin9.de</a>&gt;</code></span><br />
+<span id="revdate">June 2013</span>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_bachelor_thesis_of_dennis_felsing">Bachelor Thesis of Dennis Felsing</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="literalblock">
+<div class="paragraph"><p>This document explains how to install ghc-vis on a fresh installation of Mac
+OS X 10.8 on an x86_64 system.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_homebrew">Install HomeBrew</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Install the <em>Command Line Tools for Xcode</em> or from
+<a href="https://developer.apple.com/downloads">https://developer.apple.com/downloads</a>
+.</p></div>
+<div class="paragraph"><p>Install HomeBrew as described on
+<a href="http://mxcl.github.io/homebrew/">http://mxcl.github.io/homebrew/</a>
+:</p></div>
+<div class="listingblock">
 <div class="content">
-<pre><code>Karlsruhe Institute of Technology
-At the Department of Informatics
-Institute for Program Structures and Data Organization (IPD)</code></pre>
+<pre><code>ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"</code></pre>
 </div></div>
-<div class="literalblock">
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_gtk_and_graphviz">Install GTK and GraphViz</h2>
+<div class="sectionbody">
+<div class="listingblock">
 <div class="content">
-<pre><code>Reviewer: Prof. Gregor Snelting
-Advisor: Joachim Breitner</code></pre>
+<pre><code>brew install gtk graphviz
+gtk-demo</code></pre>
 </div></div>
+<div class="paragraph"><p>If you&#8217;re running a Hackintosh with an older CPU you have to set LLVM to
+compile for your CPU instead of the one advertised by your virtual machine
+(LLVM wrongly uses the CPU ID instead of its cap flags to determine which
+instructions it supports). To do this open <code>/usr/local/Library/ENV/4.3/cc</code> in
+a text editor and replace <code>-march=native</code> with <code>-march=core2</code>. See
+<a href="https://github.com/mxcl/homebrew/issues/19567#issuecomment-18888359">https://github.com/mxcl/homebrew/issues/19567#issuecomment-18888359</a>
+for more details.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_abstract">Abstract</h2>
+<h2 id="_install_the_haskell_platform">Install the Haskell Platform</h2>
 <div class="sectionbody">
-<div class="paragraph"><p>This thesis details the motivation, implementation and evaluation of ghc-vis,
-a tool for visualizing Haskell data structures inside of GHCi and GHC compiled
-programs at runtime. The layout of objects on the GHC heap is used as the
-basis for two types of visualizations, which respectively aim to functionally
-be supersets of GHCi&#8217;s :print and vacuum-cairo. Examples for using ghc-vis to
-further the understanding of lazy evaluation and sharing in Haskell are given.</p></div>
-<div class="paragraph"><p>The visualization of sharing and lazy evaluation in Haskell data structures
-can be useful to enhance the comprehension of functional data structures and
-algorithms and their perfomance in the environment of education, development
-and debugging.</p></div>
-<div class="paragraph"><p>A new library for parsing and viewing graphs in Haskell, called xdot, was
-created in order to interactively view graphs created by Graphviz.</p></div>
+<div class="paragraph"><p>Visit
+<a href="http://www.haskell.org/platform/mac.html">http://www.haskell.org/platform/mac.html</a>
+and install the Haskell Platform.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_material">Material</h2>
+<h2 id="_set_correct_paths">Set Correct Paths</h2>
 <div class="sectionbody">
-<div class="ulist"><ul>
-<li>
-<p>
-<a href="thesis.pdf">Thesis</a> (<a href="thesis.tar.bz2">source</a>)
-</p>
-</li>
-<li>
-<p>
-<a href="examples.tar.bz2">Examples used in the thesis</a>
-</p>
-</li>
-<li>
-<p>
-<a href="beamer.pdf">Talk</a> (in German, <a href="beamer.tar.bz2">source</a>)
-</p>
-</li>
-<li>
-<p>
-<a href="ghc-vis">http://felsin9.de/nnis/ghc-vis</a> (<a href="http://hackage.haskell.org/package/ghc-vis">on Hackage</a>)
-</p>
-</li>
-<li>
-<p>
-xdot (<a href="http://hackage.haskell.org/package/xdot">on Hackage</a>)
-</p>
-</li>
-</ul></div>
+<div class="paragraph"><p>Set up the correct executable and library paths by adding them to your
+<code>.profile</code>:</p></div>
+<div class="listingblock">
+<div class="content">
+<pre><code>cat &lt;&lt;EOT &gt;&gt; ~/.profile
+export PATH=\$HOME/Library/Haskell/bin:/usr/local/bin:\$PATH
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
+export LDFLAGS=-L/usr/local/lib
+export CFLAGS=-I/usr/local/include
+export LIBS=-L/usr/local/lib
+EOT
+source .profile</code></pre>
+</div></div>
+<div class="paragraph"><p>This is important as otherwise the linker will use the system&#8217;s cairo version
+instead of the one we just installed, leading to a segmentation fault. See
+<a href="https://github.com/vslavik/diff-pdf/issues/13#issuecomment-18222977">https://github.com/vslavik/diff-pdf/issues/13#issuecomment-18222977</a>
+for more details.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_ghc_vis">Install ghc-vis</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre><code>cabal update
+cabal install gtk2hs-buildtools
+cabal install ghc-vis --disable-library-profiling</code></pre>
+</div></div>
+<div class="paragraph"><p>Follow the instructions in the output of <code>cabal install ghc-vis</code> to setup the
+ghci script.</p></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-06-07 09:28:02 CEST
+Last updated 2013-06-07 06:51:09 CEST
 </div>
 </div>
 </body>

@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
 <meta name="generator" content="AsciiDoc 8.6.8" />
-<title>Visualization of Lazy Evaluation and Sharing</title>
+<title>Installing ghc-vis on Arch Linux</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
@@ -731,79 +731,51 @@ asciidoc.install();
 </head>
 <body class="article">
 <div id="header">
-<h1>Visualization of Lazy Evaluation and Sharing</h1>
+<h1>Installing ghc-vis on Arch Linux</h1>
+<span id="author">Dennis Felsing</span><br />
+<span id="email"><code>&lt;<a href="mailto:dennis@felsin9.de">dennis@felsin9.de</a>&gt;</code></span><br />
+<span id="revdate">June 2013</span>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_bachelor_thesis_of_dennis_felsing">Bachelor Thesis of Dennis Felsing</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="literalblock">
+<div class="paragraph"><p>This document explains how to install ghc-vis on Arch Linux.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_haskell_core">Install [haskell-core]</h2>
+<div class="sectionbody">
+<div class="paragraph"><p>Visit
+<a href="https://wiki.archlinux.org/index.php/Haskell_Package_Guidelines#.5Bhaskell-core.5D">https://wiki.archlinux.org/index.php/Haskell_Package_Guidelines#.5Bhaskell-core.5D</a>
+and install the [haskell-core] repository.</p></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_dependencies_of_ghc_vis">Install dependencies of ghc-vis</h2>
+<div class="sectionbody">
+<div class="listingblock">
 <div class="content">
-<pre><code>Karlsruhe Institute of Technology
-At the Department of Informatics
-Institute for Program Structures and Data Organization (IPD)</code></pre>
+<pre><code>pacman -S haskell-graphviz haskell-gtk</code></pre>
 </div></div>
-<div class="literalblock">
+</div>
+</div>
+<div class="sect1">
+<h2 id="_install_ghc_vis">Install ghc-vis</h2>
+<div class="sectionbody">
+<div class="listingblock">
 <div class="content">
-<pre><code>Reviewer: Prof. Gregor Snelting
-Advisor: Joachim Breitner</code></pre>
+<pre><code>cabal update
+cabal install ghc-vis</code></pre>
 </div></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_abstract">Abstract</h2>
-<div class="sectionbody">
-<div class="paragraph"><p>This thesis details the motivation, implementation and evaluation of ghc-vis,
-a tool for visualizing Haskell data structures inside of GHCi and GHC compiled
-programs at runtime. The layout of objects on the GHC heap is used as the
-basis for two types of visualizations, which respectively aim to functionally
-be supersets of GHCi&#8217;s :print and vacuum-cairo. Examples for using ghc-vis to
-further the understanding of lazy evaluation and sharing in Haskell are given.</p></div>
-<div class="paragraph"><p>The visualization of sharing and lazy evaluation in Haskell data structures
-can be useful to enhance the comprehension of functional data structures and
-algorithms and their perfomance in the environment of education, development
-and debugging.</p></div>
-<div class="paragraph"><p>A new library for parsing and viewing graphs in Haskell, called xdot, was
-created in order to interactively view graphs created by Graphviz.</p></div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_material">Material</h2>
-<div class="sectionbody">
-<div class="ulist"><ul>
-<li>
-<p>
-<a href="thesis.pdf">Thesis</a> (<a href="thesis.tar.bz2">source</a>)
-</p>
-</li>
-<li>
-<p>
-<a href="examples.tar.bz2">Examples used in the thesis</a>
-</p>
-</li>
-<li>
-<p>
-<a href="beamer.pdf">Talk</a> (in German, <a href="beamer.tar.bz2">source</a>)
-</p>
-</li>
-<li>
-<p>
-<a href="ghc-vis">http://felsin9.de/nnis/ghc-vis</a> (<a href="http://hackage.haskell.org/package/ghc-vis">on Hackage</a>)
-</p>
-</li>
-<li>
-<p>
-xdot (<a href="http://hackage.haskell.org/package/xdot">on Hackage</a>)
-</p>
-</li>
-</ul></div>
+<div class="paragraph"><p>Follow the instructions in the output of <code>cabal install ghc-vis</code> to setup the
+ghci script.</p></div>
 </div>
 </div>
 </div>
 <div id="footnotes"><hr /></div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2013-06-07 09:28:02 CEST
+Last updated 2013-06-07 06:51:05 CEST
 </div>
 </div>
 </body>
