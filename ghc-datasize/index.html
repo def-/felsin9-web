@@ -1,11 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-<head>
-<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.8" />
-<title>ghc-datasize</title>
-<style type="text/css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8"><meta name="generator" content="AsciiDoc 8.6.8"><title>The ghc-datasize User Guide</title><style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
 
 /* Default font. */
@@ -567,215 +560,32 @@ body.manpage div.sectionbody {
     margin-top: 0.5em;
   }
 }
-</style>
-<script type="text/javascript">
-/*<![CDATA[*/
-var asciidoc = {  // Namespace.
-
-/////////////////////////////////////////////////////////////////////
-// Table Of Contents generator
-/////////////////////////////////////////////////////////////////////
-
-/* Author: Mihai Bazon, September 2002
- * http://students.infoiasi.ro/~mishoo
- *
- * Table Of Content generator
- * Version: 0.4
- *
- * Feel free to use this script under the terms of the GNU General Public
- * License, as long as you do not remove or alter this notice.
- */
-
- /* modified by Troy D. Hanson, September 2006. License: GPL */
- /* modified by Stuart Rackham, 2006, 2009. License: GPL */
-
-// toclevels = 1..4.
-toc: function (toclevels) {
-
-  function getText(el) {
-    var text = "";
-    for (var i = el.firstChild; i != null; i = i.nextSibling) {
-      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
-        text += i.data;
-      else if (i.firstChild != null)
-        text += getText(i);
-    }
-    return text;
-  }
-
-  function TocEntry(el, text, toclevel) {
-    this.element = el;
-    this.text = text;
-    this.toclevel = toclevel;
-  }
-
-  function tocEntries(el, toclevels) {
-    var result = new Array;
-    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
-    // Function that scans the DOM tree for header elements (the DOM2
-    // nodeIterator API would be a better technique but not supported by all
-    // browsers).
-    var iterate = function (el) {
-      for (var i = el.firstChild; i != null; i = i.nextSibling) {
-        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
-          var mo = re.exec(i.tagName);
-          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
-            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
-          }
-          iterate(i);
-        }
-      }
-    }
-    iterate(el);
-    return result;
-  }
-
-  var toc = document.getElementById("toc");
-  if (!toc) {
-    return;
-  }
-
-  // Delete existing TOC entries in case we're reloading the TOC.
-  var tocEntriesToRemove = [];
-  var i;
-  for (i = 0; i < toc.childNodes.length; i++) {
-    var entry = toc.childNodes[i];
-    if (entry.nodeName.toLowerCase() == 'div'
-     && entry.getAttribute("class")
-     && entry.getAttribute("class").match(/^toclevel/))
-      tocEntriesToRemove.push(entry);
-  }
-  for (i = 0; i < tocEntriesToRemove.length; i++) {
-    toc.removeChild(tocEntriesToRemove[i]);
-  }
-
-  // Rebuild TOC entries.
-  var entries = tocEntries(document.getElementById("content"), toclevels);
-  for (var i = 0; i < entries.length; ++i) {
-    var entry = entries[i];
-    if (entry.element.id == "")
-      entry.element.id = "_toc_" + i;
-    var a = document.createElement("a");
-    a.href = "#" + entry.element.id;
-    a.appendChild(document.createTextNode(entry.text));
-    var div = document.createElement("div");
-    div.appendChild(a);
-    div.className = "toclevel" + entry.toclevel;
-    toc.appendChild(div);
-  }
-  if (entries.length == 0)
-    toc.parentNode.removeChild(toc);
-},
-
-
-/////////////////////////////////////////////////////////////////////
-// Footnotes generator
-/////////////////////////////////////////////////////////////////////
-
-/* Based on footnote generation code from:
- * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
- */
-
-footnotes: function () {
-  // Delete existing footnote entries in case we're reloading the footnodes.
-  var i;
-  var noteholder = document.getElementById("footnotes");
-  if (!noteholder) {
-    return;
-  }
-  var entriesToRemove = [];
-  for (i = 0; i < noteholder.childNodes.length; i++) {
-    var entry = noteholder.childNodes[i];
-    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
-      entriesToRemove.push(entry);
-  }
-  for (i = 0; i < entriesToRemove.length; i++) {
-    noteholder.removeChild(entriesToRemove[i]);
-  }
-
-  // Rebuild footnote entries.
-  var cont = document.getElementById("content");
-  var spans = cont.getElementsByTagName("span");
-  var refs = {};
-  var n = 0;
-  for (i=0; i<spans.length; i++) {
-    if (spans[i].className == "footnote") {
-      n++;
-      var note = spans[i].getAttribute("data-note");
-      if (!note) {
-        // Use [\s\S] in place of . so multi-line matches work.
-        // Because JavaScript has no s (dotall) regex flag.
-        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
-        spans[i].innerHTML =
-          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
-          "' title='View footnote' class='footnote'>" + n + "</a>]";
-        spans[i].setAttribute("data-note", note);
-      }
-      noteholder.innerHTML +=
-        "<div class='footnote' id='_footnote_" + n + "'>" +
-        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
-        n + "</a>. " + note + "</div>";
-      var id =spans[i].getAttribute("id");
-      if (id != null) refs["#"+id] = n;
-    }
-  }
-  if (n == 0)
-    noteholder.parentNode.removeChild(noteholder);
-  else {
-    // Process footnoterefs.
-    for (i=0; i<spans.length; i++) {
-      if (spans[i].className == "footnoteref") {
-        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
-        href = href.match(/#.*/)[0];  // Because IE return full URL.
-        n = refs[href];
-        spans[i].innerHTML =
-          "[<a href='#_footnote_" + n +
-          "' title='View footnote' class='footnote'>" + n + "</a>]";
-      }
-    }
-  }
-},
-
-install: function(toclevels) {
-  var timerId;
-
-  function reinstall() {
-    asciidoc.footnotes();
-    if (toclevels) {
-      asciidoc.toc(toclevels);
-    }
-  }
-
-  function reinstallAndRemoveTimer() {
-    clearInterval(timerId);
-    reinstall();
-  }
-
-  timerId = setInterval(reinstall, 500);
-  if (document.addEventListener)
-    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
-  else
-    window.onload = reinstallAndRemoveTimer;
+ul.toc {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 0;
 }
 
+ul.toc ul.toc {
+	padding-left: 0.5em;
 }
-asciidoc.install(2);
-/*]]>*/
-</script>
-</head>
-<body class="article">
-<div id="header">
-<h1>ghc-datasize</h1>
-<span id="author">Dennis Felsing</span><br />
-<span id="email"><code>&lt;<a href="mailto:dennis@felsin9.de">dennis@felsin9.de</a>&gt;</code></span><br />
-<span id="revdate">June 2013</span>
-<div id="toc">
-  <div id="toctitle">Table of Contents</div>
-  <noscript><p><b>JavaScript must be enabled in your browser to display the table of contents.</b></p></noscript>
+</style></head><body class="article"><div id="header"><a class="bctarget" name="header"></a>
+<h1>The ghc-datasize User Guide</h1>
+<span id="author"><a class="bctarget" name="author"></a>Dennis Felsing</span><br>
+<span id="email"><a class="bctarget" name="email"></a><code>&lt;<a href="mailto:dennis@felsin9.de">dennis@felsin9.de</a>&gt;</code></span><br>
+<span id="revdate"><a class="bctarget" name="revdate"></a>June 2013</span>
+<div id="toc"><a class="bctarget" name="toc"></a>
+  <div id="toctitle"><a class="bctarget" name="toctitle"></a>Table of Contents</div>
+  <!--begin-toc-->
+<ul class="toc">
+<li><a href="#installation">1. Installation</a>
+<li><a href="#usage">2. Usage</a>
+<li><a href="#related_projects">3. Related Projects</a>
+<li><a href="#bugs_feature_requests_development">4. Bugs, Feature Requests, Development</a></ul>
+<!--end-toc-->
 </div>
-</div>
-<div id="content">
-<div id="preamble">
+</div><div id="content"><a class="bctarget" name="content"></a>
+<div id="preamble"><a class="bctarget" name="preamble"></a>
 <div class="sectionbody">
 <div class="paragraph"><p>ghc-datasize is a tool to determine the size of Haskell data structures in
 GHC&#8217;s memory. Determining the size of recursive data structures is supported.
@@ -783,7 +593,7 @@ All sizes are in Bytes.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_installation">Installation</h2>
+<h2 id="installation"><a class="bctarget" name="installation"></a>1. Installation</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>The <a href="http://hackage.haskell.org/package/ghc-datasize">package</a> is available on
 Hackage. Install it like this:</p></div>
@@ -800,7 +610,7 @@ your cabal database before:</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_usage">Usage</h2>
+<h2 id="usage"><a class="bctarget" name="usage"></a>2. Usage</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>Now you can run ghci and experiment with ghc-datasize:</p></div>
 <div class="listingblock">
@@ -868,25 +678,21 @@ the same data.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_related_projects">Related Projects</h2>
+<h2 id="related_projects"><a class="bctarget" name="related_projects"></a>3. Related Projects</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>If you&#8217;re not just interested in the size of Haskell data, but also their
 structure in memory, have a look at <a href="../ghc-vis">ghc-vis</a>.</p></div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_bugs_feature_requests_development">Bugs, Feature Requests, Development</h2>
+<h2 id="bugs_feature_requests_development"><a class="bctarget" name="bugs_feature_requests_development"></a>4. Bugs, Feature Requests, Development</h2>
 <div class="sectionbody">
 <div class="paragraph"><p>If you have any problems, new ideas or comments concerning ghc-datasize, just
 drop me an email. I&#8217;ll be glad to help you.</p></div>
 </div>
 </div>
+</div><div id="footer"><a class="bctarget" name="footer"></a>
+<div id="footer-text"><a class="bctarget" name="footer-text"></a>
+Last updated 2013-06-07 22:58:58 CEST
 </div>
-<div id="footnotes"><hr /></div>
-<div id="footer">
-<div id="footer-text">
-Last updated 2013-06-07 20:20:16 CEST
-</div>
-</div>
-</body>
-</html>
+</div></body></html>

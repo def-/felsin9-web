@@ -1,8 +1,7 @@
 The ghc-datasize User Guide
-============
+===========================
 Dennis Felsing <dennis@felsin9.de>
 June 2013
-:toc2:
 
 ghc-datasize is a tool to determine the size of Haskell data structures in
 GHC's memory. Determining the size of recursive data structures is supported.
@@ -13,22 +12,22 @@ All sizes are in Bytes.
 The http://hackage.haskell.org/package/ghc-datasize[package] is available on
 Hackage. Install it like this:
 
---------------------
+----
 $ cabal install ghc-datasize
---------------------
+----
 
 If you want to make sure you get the newest version of ghc-datasize update
 your cabal database before:
 
---------------------
+----
 $ cabal update
---------------------
+----
 
 == Usage
 
 Now you can run ghci and experiment with ghc-datasize:
 
---------------------
+----
 $ ghci
 GHCi, version 7.6.3: http://www.haskell.org/ghc/  :? for help
 λ> import GHC.DataSize
@@ -43,14 +42,14 @@ GHCi, version 7.6.3: http://www.haskell.org/ghc/  :? for help
 λ> import Data.Complex
 λ> recursiveSize $ 2 :+ 3
 248
---------------------
+----
 
 For data structures that are not yet evaluated the size of the unevaluated
 structure in memory is calculated. To make sure you get the size of the
 resulting data structure, you have to force evaluation to Weak-Head Normal
 Form (WHNF):
 
---------------------
+----
 λ> recursiveSize $! 2 :+ 3
 56
 λ> recursiveSize $! (3 :: Int)
@@ -67,14 +66,14 @@ Form (WHNF):
 88
 λ> recursiveSize $! "foobar"
 88
---------------------
+----
 
 For composite data structures evaluation to WHNF is not enough. In the list
 "foo" only the first element, 'f', was evaluated, while the rest of the list
 stays unevaluated. To get the size of the fully evaluated data structure a
 deep evaluation has to be forced:
 
---------------------
+----
 λ> import Control.DeepSeq
 λ> recursiveSize $!! ""
 8
@@ -87,7 +86,7 @@ deep evaluation has to be forced:
 24024
 λ> recursiveSize $!! B.pack $ take 1000 $ repeat 'X'
 1072
---------------------
+----
 
 Strings are quite memory intensive, taking 24024 Bytes to store 1000 8-bit
 Chars. ByteStrings are much more memory friendly, taking only 1072 Bytes for
