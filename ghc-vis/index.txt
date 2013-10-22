@@ -447,6 +447,8 @@ These objects are used in GHCi:
 | General Application | _AP_       | _t0_      | Unevaluated value (mostly used in interpreted code)
 | Function            | _Fun_      | _f0_      | Function applied to less parameters than it takes (possibly 0)
 | Partial Application | _PAP_      | _f0_      | Function applied to less parameters than it takes (mostly used in interpreted code)
+| BCO                 | _BCO_      | _BCO_      | Byte Code Object, contains
+code to be executed by the interpreter
 |====
 
 Commands are executed on the GHCi command line:
