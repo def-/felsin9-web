@@ -45,3 +45,15 @@ th {
 tr:hover{
   background-color: #eeeeee;
 }
+
+.index {
+  text-align: center;
+  margin: 0;
+  list-style-type: none;
+}
+
+.index li {
+  display: inline;
+  padding-right: 1em;
+  padding-left: 1em;
+}
