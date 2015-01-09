@@ -1,0 +1,31 @@
+# Dependencies
+markdown:         redcarpet
+redcarpet:
+  extensions: [tables, with_toc_data]
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Dennis Felsing
+#tagline:          aka def- & deen
+url:              http://felsin9.de/nnis/
+#paginate:         1
+baseurl:          /nnis/
+author:
+  name:           Dennis Felsing
+  url:            http://felsin9.de/nnis
+  email:          dennis@felsin9.de
+
+pages_list:
+  Software: '/nnis/software/'
+  'Teaching / Research': '/nnis/teaching-research/'
+  Blog: 'http://hookrace.net/'
+  DDNet: 'http://ddnet.tw/'
+  GitHub: 'https://github.com/def-'
+
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/poole/poole
