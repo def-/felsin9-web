@@ -45,6 +45,20 @@ DDraceNetwork is a special version of DDRace, a Teeworlds modification. Help eac
 - [Maps repository](https://github.com/def-/ddnet-maps)
 
 ## Haskell
+### gifstream (2012)
+
+Make interactive games in Haskell using GIF streams that can be shown in the webbrowser. An example of snake is included. Compile and run:
+
+    $ ghc -O3 -threaded Snake.Finished.hs
+    $ ./SnakeFinished
+    Listening on http://127.0.0.1:5002/
+
+Control using WASD in the terminal, output in the browser looks like this:
+
+![GIF Snake](https://raw.githubusercontent.com/def-/gifstream/master/snake.gif)
+
+- [on GitHub](https://github.com/def-/gifstream)
+
 ### ghc-datasize (2012)
 
 ghc-datasize is a tool to determine the size of Haskell data structures in GHC's memory. Determining the size of recursive data structures is supported. All sizes are in Bytes.
@@ -116,7 +130,7 @@ Sudoku game and solver for TI V200.
 
 ## simple xmpp client (2008) (unmaintained)
 
-<img alt="ghc-vis logo" src="../sxc/logo.svgz">
+<img alt="sxc logo" src="../sxc/logo.svg">
 
 sxc is for jabber what [ii (irc it)](http://tools.suckless.org/ii/) is for IRC: A minimalistic file-oriented jabber client which runs in the background and can be controlled by using basic command line tools to read from/write into the files/FIFOs sxc creates.
 
@@ -128,7 +142,7 @@ sxc is for jabber what [ii (irc it)](http://tools.suckless.org/ii/) is for IRC: 
 
 ## ajaxWM (2008) (unmaintained)
 
-<img style="width: 50%" alt="ghc-vis logo" src="../ajaxwm/logo.svgz">
+<img style="width: 50%" alt="ajaxWM logo" src="../ajaxwm/logo.svg">
 
 ajaxWM is a window manager in a web browser, a terminal emulator and an SSH proxy. It allows remote controlling a computer even when there is a firewall and packet analyzer between, blocking everything else than HTTP(S)-connections. Because the ajaxWM client runs in any javascript-capable web browser, you can even use it when you are not allowed to install any software, for example in an internet café, at school, or at work.
 
