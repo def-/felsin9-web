@@ -23,7 +23,6 @@ pages_list:
   'Teaching / Research': '/nnis/teaching-research/'
   Blog: 'http://hookrace.net/'
   DDNet: 'http://ddnet.tw/'
-  GitHub: 'https://github.com/def-'
 
 # Custom vars
 version:          1.0.0
