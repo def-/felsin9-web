@@ -20,7 +20,7 @@ I'm pretty interested in [Nim](http://nim-lang.org/), a great new programming la
 
 I held a talk at the [GPN14](https://entropia.de/GPN14) about Nim:
 
-- [Slides](/nimrod/nimrod-gpn14.pdf) (in German)
+- [Slides](../nimrod/nimrod-gpn14.pdf) (in German)
 - [Talk Website](https://entropia.de/GPN14:Nimrod) (in German)
 - [Video Recording](http://media.ccc.de/browse/conferences/gpn/gpn14/gpn14_-_5892_-_de_-_zkm-vortragssaal_-_201406211130_-_nimrod_-_dennis_felsing.html#video) (in German)
 

@@ -5,6 +5,13 @@ title: Teaching & Research
 
 # Teaching & Research
 
+## 2015
+
+### Master Thesis: Parallel Graph Algorithms on the Xeon Phi Coprocessor
+
+- [Website](../phi/thesis/)
+- [Thesis](../phi/thesis/thesis.pdf)
+
 ## 2014
 
 ### Exercises Programming Paradigms
