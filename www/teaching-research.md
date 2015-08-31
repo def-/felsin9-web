@@ -41,6 +41,10 @@ Intl. Conference on Automated Software Engineering (ASE 2014)
 - ARWDT: [Paper](../rv/arwdt-abstract.pdf), [Presentation](../rv/arwdt-presentation.pdf)
 - Final: [Paper](../rv/final-paper.pdf), [Presentation](../rv/final-presentation.pdf)
 
+### Algorithm Engineering Coursework: Base Case Comparison Based Sorting
+
+- [Paper](../algeng/paper.pdf) (in German), [Presentation](../algeng/beamer.pdf) (in German), [Sources](../algeng/basesort.tar.bz2)
+
 ## 2012
 
 ### Exercises Programming Paradigms
@@ -53,6 +57,8 @@ Intl. Conference on Automated Software Engineering (ASE 2014)
 - [ghc-vis](../software/#ghc-vis-(2012))
 
 ### Algorithms 2 Programming Challenges
+
+Both were the fastest implementations:
 
 - Priority Queue for Dijkstra's Algorithm: [Source Code](../algo2/challenge1-source.hpp), [Framework](../algo2/challenge1-framework.tar.bz2)
 - Maximum Flow: [Source Code](../algo2/challenge2-source.hpp), [Framework](../algo2/challenge2-framework.tar.bz2)
