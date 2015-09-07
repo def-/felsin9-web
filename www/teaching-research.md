@@ -12,7 +12,7 @@ title: Teaching & Research
 - [Website](../phi/thesis/)
 - [Thesis](../phi/thesis/thesis.pdf)
 - [Thesis](../phi/thesis/thesis.pdf) ([BibTeX](../phi/thesis/thesis.bib), [source](../phi/thesis/thesis.tar.xz))
-- [Slides](../phi/thesis/beamer.pdf)
+- [Slides](../phi/thesis/beamer.pdf) ([source](../phi/thesis/beamer.tar.xz))
 
 ## 2014
 
