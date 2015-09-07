@@ -31,3 +31,4 @@ While the hot inner loop by itself can utilize the 512-bit vector instructions o
 
 ## Material
 - [Thesis](thesis.pdf) ([BibTeX](thesis.bib), [source](thesis.tar.xz))
+- [Slides](beamer.pdf)
