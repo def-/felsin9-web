@@ -5,7 +5,7 @@ title: Home
 ## About
 
 - Active contributor and [article author](http://hookrace.net/) for the [Nim programming language](http://nim-lang.org/)
-- Working on my Master's thesis at KIT
+- Working on my [Master thesis](phi/thesis/) at KIT
 - Worked on research developing a new method for [Regression Verification](teaching-research/#automating-regression-verification)
 - Held [programming paradigms exercises](http://www.student.kit.edu/~ubcqr/2014w/uebung_pp/) (in German): Haskell, lambda calculus, type inference, Prolog, Scala, etc.
 - Developing and running [DDNet](http://ddnet.tw/), a unique cooperative 2D game
