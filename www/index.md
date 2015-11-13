@@ -4,7 +4,7 @@ title: Home
 ---
 ## About
 
-- Currently [travelling Europe for 1 month](http://hookrace.net/blog/travel-europe/) after finishing my studies
+- Currently [travelling Europe for 1 month](http://hookrace.net/blog/travel-europe-3/) after finishing my studies
 - Active contributor and [article author](http://hookrace.net/) for the [Nim programming language](http://nim-lang.org/)
 - Working on my [Master thesis](phi/thesis/) at KIT
 - Worked on research developing a new method for [Regression Verification](research/#automating-regression-verification)
