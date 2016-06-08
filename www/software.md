@@ -7,9 +7,9 @@ title: Software
 
 ## HookRace (since 2014)
 
-Planned successor of [DDNet](http://ddnet.tw/), but just a Nim blog for now:
+Planned successor of [DDNet](https://ddnet.tw/), but just a Nim blog for now:
 
-- [Development Blog](http://hookrace.net/)
+- [Development Blog](https://hookrace.net/)
 
 ## The Nim programming language (since 2014)
 
@@ -40,7 +40,7 @@ Using [AFL](http://lcamtuf.coredump.cx/afl/) I have discovered a few interesting
 
 DDraceNetwork is a special version of DDRace, a Teeworlds modification. Help each other finish races with up to 64 players, compete against the best in international tournaments, design your own maps, or run your own server. The official servers are located in Germany, USA, Canada, Russia, China, Chile, Brazil and South Africa. All ranks made on official servers are available everywhere and you can collect points!
 
-- [Website](http://ddnet.tw/)
+- [Website](https://ddnet.tw/)
 - [Game repository](https://github.com/def-/ddnet)
 - [Maps repository](https://github.com/def-/ddnet-maps)
 

@@ -4,12 +4,12 @@ title: Home
 ---
 ## About
 
-- Currently [travelling Europe for 1 month](http://hookrace.net/blog/travel-europe-3/) after finishing my studies
-- Active contributor and [article author](http://hookrace.net/) for the [Nim programming language](http://nim-lang.org/)
+- Currently [travelling Europe for 1 month](https://hookrace.net/blog/travel-europe-3/) after finishing my studies
+- Active contributor and [article author](https://hookrace.net/) for the [Nim programming language](http://nim-lang.org/)
 - Working on my [Master thesis](phi/thesis/) at KIT
 - Worked on research developing a new method for [Regression Verification](research/#automating-regression-verification)
 - Held [programming paradigms exercises](http://www.student.kit.edu/~ubcqr/2014w/uebung_pp/) (in German): Haskell, lambda calculus, type inference, Prolog, Scala, etc.
-- Developing and running [DDNet](http://ddnet.tw/), a unique cooperative 2D game
+- Developing and running [DDNet](https://ddnet.tw/), a unique cooperative 2D game
 
 ## Repositories
 

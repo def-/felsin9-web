@@ -22,8 +22,8 @@ pages_list:
   Software: '/nnis/software/'
   Research: '/nnis/research/'
   Teaching: '/nnis/teaching/'
-  Blog: 'http://hookrace.net/'
-  DDNet: 'http://ddnet.tw/'
+  Blog: 'https://hookrace.net/'
+  DDNet: 'https://ddnet.tw/'
 
 # Custom vars
 version:          1.0.0
