@@ -4,7 +4,8 @@ title: Home
 ---
 ## About
 
-- Currently [travelling Europe for 1 month](https://hookrace.net/blog/travel-europe-3/) after finishing my studies
+- Just started a job as a Software Developer at SAP working on HANA
+- [Travelled Europe for a month](https://hookrace.net/blog/travel-europe-3/) after finishing my studies
 - Active contributor and [article author](https://hookrace.net/) for the [Nim programming language](http://nim-lang.org/)
 - Working on my [Master thesis](phi/thesis/) at KIT
 - Worked on research developing a new method for [Regression Verification](research/#automating-regression-verification)
