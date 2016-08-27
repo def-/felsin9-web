@@ -8,7 +8,7 @@ title: Home
 - [Travelled Europe for a month](https://hookrace.net/blog/travel-europe-3/) after finishing my studies
 - Active contributor and [article author](https://hookrace.net/) for the [Nim programming language](http://nim-lang.org/)
 - Worked on research developing a new method for [Regression Verification](research/#automating-regression-verification)
-- Held [programming paradigms exercises](http://www.student.kit.edu/~ubcqr/2014w/uebung_pp/) (in German): Haskell, lambda calculus, type inference, Prolog, Scala, etc.
+- Held [programming paradigms exercises](https://hookrace.net/teaching/2014w/uebung_pp/) (in German): Haskell, lambda calculus, type inference, Prolog, Scala, etc.
 - Developing and running [DDNet](https://ddnet.tw/), a unique cooperative 2D game
 
 ## Profiles
