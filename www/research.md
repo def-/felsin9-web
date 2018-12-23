@@ -44,7 +44,7 @@ Intl. Conference on Automated Software Engineering (ASE 2014)
 ### Bachelor Thesis: Visualization of Lazy Evaluation and Sharing
 
 - [Website](../ghc-vis/thesis/)
-- [ghc-vis](../software/#ghc-vis-(2012))
+- [ghc-vis](../software/#ghc-vis-2012)
 
 ### Algorithms 2 Programming Challenges
 
@@ -63,4 +63,4 @@ Both were the fastest implementations:
 ### Proseminar Zellularautomaten und Diskrete Komplexe Systeme
 
 - [Elaboration](../rotary-element/ausarbeitung.pdf) (in German), [Presentation](../rotary-element/beamer.pdf) (in German), [source](../rotary-element/ausarbeitung.tar.bz2)
-- [Rotary Element Simulation](../software/#rotary-element-simulation-(2012))
+- [Rotary Element Simulation](../software/#rotary-element-simulation-2012)
