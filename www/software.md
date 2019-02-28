@@ -7,9 +7,9 @@ title: Software
 
 ## HookRace (since 2014)
 
-Planned successor of [DDNet](https://ddnet.tw/), but just a Nim blog for now:
+Planned successor of [DDNet](https://ddnet.tw/), but then turned into my blog:
 
-- [Development Blog](https://hookrace.net/)
+- [HookRace Blog](https://hookrace.net/)
 
 ## The Nim programming language (since 2014)
 
