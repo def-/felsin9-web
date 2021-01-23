@@ -12,7 +12,6 @@ title: Home
 
 - [GitHub](https://github.com/def-)
 - [LinkedIn](https://www.linkedin.com/in/defelsing)
-- [CouchSurfing](https://www.couchsurfing.com/people/dennis-felsing)
 - [Facebook](https://www.facebook.com/defelsing)
 
 ## Contact
