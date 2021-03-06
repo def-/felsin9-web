@@ -1,6 +1,6 @@
 # Dependencies
-markdown:         redcarpet
-redcarpet:
+markdown:         kramdown
+kramdown:
   extensions: [tables, with_toc_data]
 highlighter:      pygments
 

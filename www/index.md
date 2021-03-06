@@ -5,8 +5,8 @@ title: Home
 ## About
 
 - Software Developer at SAP working on the HANA database
-- Occasionally write articles on [my blog](https://hookrace.net/)
 - Maintaining [DDNet](https://ddnet.tw/), a unique cooperative 2D game
+- Occasionally write articles on [my blog](https://hookrace.net/)
 
 ## Profiles
 
