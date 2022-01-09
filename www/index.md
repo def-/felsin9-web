@@ -4,7 +4,7 @@ title: Home
 ---
 ## About
 
-- Software Developer at SAP working on the HANA database
+- Software Developer at [Yugabyte](https://www.yugabyte.com/)
 - Maintaining [DDNet](https://ddnet.tw/), a unique cooperative 2D game
 - Occasionally write articles on [my blog](https://hookrace.net/)
 
