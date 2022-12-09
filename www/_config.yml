@@ -19,11 +19,11 @@ author:
   email:          dennis@felsin9.de
 
 pages_list:
+  Blog: 'https://hookrace.net/'
+  DDNet: 'https://ddnet.org/'
   Software: '/nnis/software/'
   Research: '/nnis/research/'
   Teaching: '/nnis/teaching/'
-  Blog: 'https://hookrace.net/'
-  DDNet: 'https://ddnet.org/'
 
 # Custom vars
 version:          1.0.0

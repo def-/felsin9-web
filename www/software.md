@@ -11,11 +11,23 @@ Planned successor of [DDNet](https://ddnet.org/), but then turned into my blog:
 
 - [HookRace Blog](https://hookrace.net/)
 
-## The Nim programming language (since 2014)
+## DDraceNetwork (since 2013)
 
-I'm pretty interested in [Nim](http://nim-lang.org/), a great new programming language, and am an active contributor:
+![DDraceNetwork logo](../ddnet-logo.svg)
+
+DDraceNetwork is a cooperative online 2D platformer. What started as a simple mod is now a big cooperative platformer experience! Choose from hundreds of available maps, race your way to the finish line and help your friends. Collaborate and compete with players all over the world.
+
+- [Website](https://ddnet.org/)
+- [on Steam](https://store.steampowered.com/app/412220/DDraceNetwork/)
+- [Game repository](https://github.com/ddnet/ddnet)
+
+## The Nim programming language (2014-2016)
+
+I was an active contributor in the [Nim](http://nim-lang.org/) programming language:
 
 - [nim-unsorted](https://github.com/def-/nim-unsorted): A huge list of small programs I wrote in Nim
+- [bigints](https://github.com/nim-lang/bigints): Pure BigInts library
+- [NimES](https://github.com/def-/nimes): NES Emulator
 - [My libraries](https://github.com/search?q=user%3Adef-+nim)
 
 I held a talk at the [GPN14](https://entropia.de/GPN14) about Nim:
@@ -33,16 +45,6 @@ Using [AFL](http://lcamtuf.coredump.cx/afl/) I have discovered a few interesting
 - [zsh](http://www.zsh.org/mla/workers/2014/msg01668.html)
 - FreeType: [CFF](http://git.savannah.gnu.org/cgit/freetype/freetype2.git/commit/?id=c9ca6ffc9442b4b127f948e2d993454aa7791e59), [T42](http://git.savannah.gnu.org/cgit/freetype/freetype2.git/commit/?id=b94381134efd41c6885d38e08d14106feec7284b)
 - [MKVToolNix](https://trac.bunkus.org/ticket/1089)
-
-## DDraceNetwork (since 2013)
-
-![DDraceNetwork logo](../ddnet-logo.svg)
-
-DDraceNetwork is a special version of DDRace, a Teeworlds modification. Help each other finish races with up to 64 players, compete against the best in international tournaments, design your own maps, or run your own server. The official servers are located in Germany, USA, Canada, Russia, China, Chile, Brazil and South Africa. All ranks made on official servers are available everywhere and you can collect points!
-
-- [Website](https://ddnet.org/)
-- [Game repository](https://github.com/def-/ddnet)
-- [Maps repository](https://github.com/def-/ddnet-maps)
 
 ## Haskell
 ### gifstream (2012)

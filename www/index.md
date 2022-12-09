@@ -5,7 +5,7 @@ title: Home
 ## About
 
 - Software Developer at [Yugabyte](https://www.yugabyte.com/) focussed on quality, see [opened bugs](https://github.com/yugabyte/yugabyte-db/issues/created_by/def-)
-- Maintaining [DDNet](https://ddnet.org/), a unique cooperative 2D game
+- Maintaining [DDNet](https://ddnet.org/), a unique cooperative online 2D platformer
 - Occasionally write articles on [my blog](https://hookrace.net/)
 
 ## Profiles
