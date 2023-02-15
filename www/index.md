@@ -4,8 +4,8 @@ title: Home
 ---
 ## About
 
-- Software Developer in Test at [Materialize](https://materialize.com/)
-- Maintaining [DDNet](https://ddnet.org/), a unique cooperative online 2D platformer
+- Software Developer in Test at [Materialize](https://materialize.com/), a PostgreSQL-compatible streaming database based on [Timely Dataflow](https://github.com/TimelyDataflow/timely-dataflow)
+- Maintaining [DDNet](https://ddnet.org/), a unique cooperative online 2D platformer, also on [Steam](https://store.steampowered.com/app/412220/DDraceNetwork/)
 - Occasionally write articles on [my blog](https://hookrace.net/)
 
 ## Profiles
