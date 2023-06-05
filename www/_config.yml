@@ -10,20 +10,20 @@ permalink:        pretty
 # Setup
 title:            Dennis Felsing
 #tagline:          aka def- & deen
-url:              http://felsin9.de/nnis/
+url:              https://dennis.felsing.org
 #paginate:         1
-baseurl:          /nnis/
+baseurl:          /
 author:
   name:           Dennis Felsing
-  url:            http://felsin9.de/nnis
+  url:            https://dennis.felsing.org
   email:          dennis@felsin9.de
 
 pages_list:
   Blog: 'https://hookrace.net/'
   DDNet: 'https://ddnet.org/'
-  Software: '/nnis/software/'
-  Research: '/nnis/research/'
-  Teaching: '/nnis/teaching/'
+  Software: '/software'
+  Research: '/research'
+  Teaching: '/teaching'
 
 # Custom vars
 version:          1.0.0
