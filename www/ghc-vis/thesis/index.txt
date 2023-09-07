@@ -1,6 +1,6 @@
 Visualization of Lazy Evaluation and Sharing
 ============================================
-Dennis Felsing <dennis@felsin9.de>
+Dennis Felsing <dennis@felsing.org>
 June 2013
 
 == Bachelor Thesis of Dennis Felsing
